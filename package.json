@@ -1,0 +1,24 @@
+{
+  "name": "perfist",
+  "version": "1.0.0",
+  "description": "Simple Web Application Performance Measurement Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oguzergul/perfist.git"
+  },
+  "keywords": [
+    "performance",
+    "web-vitals",
+    "javascript"
+  ],
+  "author": "Oğuz Ergül",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oguzergul/perfist/issues"
+  },
+  "homepage": "https://github.com/oguzergul/perfist#readme"
+}
