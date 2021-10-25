@@ -72,6 +72,4 @@ const performanceAnalyticReporter = ({
     }
 });
 
-modules.exports = {
-    performanceAnalyticReporter
-}
+module.exports = performanceAnalyticReporter;
