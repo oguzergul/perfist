@@ -1,6 +1,11 @@
 const {performance} = window
 const {timing} = performance;
 
+// Microsoft products does not supported.
+const isBrowserValidated = () => {
+    return !navigator.userAgent.indexOf("MSIE") > -1 || navigator.userAgent.indexOf("rv:") > -1;
+}
+
 const detectTTFB = () => {
     return Math.round(timing.responseEnd - timing.responseStart)
 }
@@ -49,20 +54,24 @@ const sendAnalyticsData = (url, body) => {
 const performanceAnalyticReporter = ({
     analysePerformance(url) {
         window.onload = () => {
-            const perfAnalytics = {
-                files: collectFolders(),
-                measurement_date: Date.now(),
-                url: window.location.href,
-                user_agent: navigator.userAgent,
-                ttfbTime: detectTTFB(),
-                fcpTime: detectFCP(),
-                domLoadTime: detectDOMLoad(),
-                windowLoadTime: detectWindowLoad(),
-                resourcesLoadTime: detectResourcesLoad(),
-            };
-            sendAnalyticsData(url, perfAnalytics);
+            if (isBrowserValidated()) {
+                const perfAnalytics = {
+                    files: collectFolders(),
+                    measurement_date: Date.now(),
+                    url: window.location.href,
+                    user_agent: navigator.userAgent,
+                    ttfbTime: detectTTFB(),
+                    fcpTime: detectFCP(),
+                    domLoadTime: detectDOMLoad(),
+                    windowLoadTime: detectWindowLoad(),
+                    resourcesLoadTime: detectResourcesLoad(),
+                };
+                sendAnalyticsData(url, perfAnalytics);
+            } else console.log('Perfist Does Not Support Microsoft Products!')
         }
     }
 });
 
-module.exports = performanceAnalyticReporter;
+modules.exports = {
+    performanceAnalyticReporter
+}

@@ -2,8 +2,13 @@
 ### Simple Web Application Performance Measurement Reporter
 
 [![npm](https://img.shields.io/badge/npm%20package-20-brightgreen)](https://www.npmjs.com/package/perfist)
+<br>
+> Minified Size : `1kB`  
+> Minified + Gzipped Size : `569B` 
 
-PERFIST is a simple web application measurentr reporter. It can use in every browers and project as you want.
+
+PERFIST is a simple web application measurement reporter. It can use in every browsers and does not effect your apps 
+performance.
 If you want to see how to make integration. You can visit links below.
 
 - Test App For Make Measurement :
@@ -14,8 +19,13 @@ If you want to see how to make integration. You can visit links below.
 
 Install the dependencies and devDependencies and start the server.
 
+#### npm
 ```javascript
 npm install perfist --save 
+```
+#### CDN
+```javascript
+<script href="https://cdn.jsdelivr.net/npm/perfist@1.0.2" crossorigin="anonymous"></script>
 ```
 ## Example usage for Vue.js App
 
