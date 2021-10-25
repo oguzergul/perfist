@@ -1,6 +1,6 @@
 {
   "name": "perfist",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple Web Application Performance Measurement Library",
   "main": "index.js",
   "scripts": {
