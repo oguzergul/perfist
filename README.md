@@ -21,7 +21,11 @@ Install the dependencies and devDependencies and start the server.
 
 #### npm
 ```javascript
-npm install perfist --save 
+$ npm install perfist --save 
+```
+#### yarn
+```javascript
+$ yarn add perfist
 ```
 #### CDN
 ```javascript
